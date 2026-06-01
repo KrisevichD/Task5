@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/Login";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
+import { Provider } from "react-redux";
+import store from "./features/store";
 
 const root = document.getElementById("root")
 
@@ -34,4 +36,8 @@ const router = createBrowserRouter([
     }
 ])
 
-container.render(<RouterProvider router={router}/>)
+container.render(
+    <Provider store={store}>
+        <RouterProvider router={router}/>
+    </Provider>
+)
