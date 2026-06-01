@@ -8,6 +8,7 @@ export function buildWebpack(options) {
         entry: options.paths.entry,
         output: {
             path: options.paths.output,
+            publicPath: '/',
             filename: '[name].[contenthash].js',
             assetModuleFilename: 'assets/[hash][ext][query]',
             clean: true,
