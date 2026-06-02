@@ -45,7 +45,7 @@ export function buildLoaders({ isDev }) {
     };
 
     const jsxLoader = {
-        test: /\.jsx$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
             loader: "babel-loader",
