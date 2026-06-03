@@ -2,7 +2,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin"
 
 export function buildLoaders({ isDev }) {
     const assetLoader = {
-        test: /\.(png|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif|woff2)$/i,
         type: 'asset/resource',
     };
 
