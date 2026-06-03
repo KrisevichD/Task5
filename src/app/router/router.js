@@ -1,31 +1,32 @@
 import App from "@/components/App";
-import { createBrowserRouter } from "react-router-dom";
-import Login from "@/pages/Login";
-import Products from "@/pages/Products";
-import Product from "@/pages/Product";
+import { lazy } from "react";
+import { createBrowserRouter, Navigate } from "react-router-dom";
+
+const About = lazy(() => import("@/pages/about/About"));
+const Catalog = lazy(() => import("@/pages/catalog/Catalog"));
+const Product = lazy(() => import("@/pages/product/Product"));
 
 const router = createBrowserRouter([
     {
-        path: '/',
         element: <App />,
         children: [
             {
-                path: '/login',
-                element: <Login />
+                path: '/about',
+                element: <About />
             },
             {
-                path: '/products',
-                element: <Products />,
+                path: '/catalog',
+                element: <Catalog />,
             },
             {
-                path: '/products/:id',
+                path: '/catalog/:id',
                 element: <Product />
             },
         ]
     },
     {
         path: '*',
-        element: <App />
+        element: <Navigate to={'/catalog'} />
     }
 ])
 

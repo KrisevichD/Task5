@@ -1,0 +1,25 @@
+.header {
+    background-color: var(--color-primary);
+    min-height: 88px;
+}
+
+.headerInner {
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collectionLeft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 31px;
+}
+
+.collectionRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}

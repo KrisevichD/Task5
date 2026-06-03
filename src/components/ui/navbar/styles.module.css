@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+    gap: 16px;
+}
+
+.link {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 4px 0;
+    border-bottom: 2px solid var(--color-underline-grey);
+}
