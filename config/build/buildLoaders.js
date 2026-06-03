@@ -13,17 +13,12 @@ export function buildLoaders({ isDev }) {
             {
                 loader: '@svgr/webpack',
                 options: {
-                    icon: true,
-                    svgoConfig: {
-                        plugins: [
-                            {
-                                name: 'convertColors',
-                                params: {
-                                    currentColor: true,
-                                }
-                            }
-                        ]
-                    }
+                    svgo: false,
+                    expandProps: 'end',
+                    replaceAttrValues: {
+                        'fill': '{props.fill || "currentColor"}',
+                        'stroke': '{props.stroke || "currentColor"}',
+                    },
                 }
             }
         ],
