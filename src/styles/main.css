@@ -1,0 +1,25 @@
+@import "./normalize.css";
+@import "./constants.css";
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('@/assets/fonts/sf-ui-display-medium.woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('@/assets/fonts/sf-ui-display-semibold.woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('@/assets/fonts/sf-ui-display-bold.woff2');
+    font-weight: 700;
+}
+
+body {
+    font-family: var(--font-sf-display), sans-serif;
+    font-weight: 500;
+}

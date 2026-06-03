@@ -1,0 +1,13 @@
+:root {
+    --color-primary: #E55A63;
+    --color-accent: #BB464E;
+    --color-white: #FFFFFF;
+    --color-bg-grey: #E2E2E4;
+    --color-bg-search: rgba(255, 255, 255, 0.3);
+    --color-text-red: #FF2D55;
+    --color-text-black: #333333;
+    --color-underline-grey: rgba(255, 255, 255, 0.2);
+    --color-outline-grey: #DBDBDB;
+
+    --font-sf-display: 'SF UI Display';
+}
