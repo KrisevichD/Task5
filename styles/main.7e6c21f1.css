@@ -291,18 +291,21 @@ svg * {
     font-family: 'SF UI Display';
     src: url(https://krisevichd.github.io/Task5/assets/eece8c1cf0380eaec0fb.woff2);
     font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'SF UI Display';
     src: url(https://krisevichd.github.io/Task5/assets/742d517db4288c8da873.woff2);
     font-weight: 600;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'SF UI Display';
     src: url(https://krisevichd.github.io/Task5/assets/c2abd6dec31d4b7aa60e.woff2);
     font-weight: 700;
+    font-display: swap;
 }
 
 body {
