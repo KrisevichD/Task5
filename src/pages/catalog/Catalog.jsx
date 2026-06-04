@@ -1,12 +1,14 @@
+import { useGetProductsQuery } from '@/api/productsApi';
 import React from 'react';
-import { useSelector } from 'react-redux';
+
 
 const Products = () => {
-    const products = useSelector((state) => state.products)
+    const { data, error, isLoading } = useGetProductsQuery()
+
+
     return (
         <div>
-            products
-            { products }
+            
         </div>
     );
 }
