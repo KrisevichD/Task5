@@ -5,18 +5,21 @@
     font-family: 'SF UI Display';
     src: url('@/assets/fonts/sf-ui-display-medium.woff2');
     font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'SF UI Display';
     src: url('@/assets/fonts/sf-ui-display-semibold.woff2');
     font-weight: 600;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'SF UI Display';
     src: url('@/assets/fonts/sf-ui-display-bold.woff2');
     font-weight: 700;
+    font-display: swap;
 }
 
 body {

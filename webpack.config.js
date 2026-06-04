@@ -1,6 +1,5 @@
 import path from "node:path"
 import { fileURLToPath } from "node:url";
-import { resolve } from "node:dns";
 import { buildWebpack } from "./config/build/buildWebpack.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -18,6 +17,7 @@ export default (env) => {
             html: path.resolve(__dirname, "public", "index.html"),
             public: path.resolve(__dirname, "public"),
             src: path.resolve(__dirname, "src"),
+            deploy: "https://krisevichd.github.io/Task5/"
         }
     }
 

@@ -2,9 +2,20 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin"
 
 export function buildLoaders({ isDev }) {
     const assetLoader = {
-        test: /\.(png|jpg|jpeg|gif|woff2)$/i,
+        test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+            filename: 'assets/images/[name].[contenthash:8][ext]',
+        },
     };
+
+    const fontsLoader = {
+        test: /\.woff2$/i,
+        type: 'asset/resource',
+        generator: {
+            filename: 'assets/fonts/[name].[contenthash:8][ext]',
+        },
+    }
 
     const svgLoader = {
         test: /\.svg$/i,
