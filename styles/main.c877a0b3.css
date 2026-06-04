@@ -1,0 +1,311 @@
+.BoUopxDV {
+    background-color: var(--color-primary);
+    min-height: 88px;
+}
+
+.jFRK2WqN {
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.BYV50Y2G {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 31px;
+}
+
+.PWa4jV5X {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.xb6XpsMI {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 12px;
+    align-items: center;
+}
+.ZaiAsgdB {
+    position: relative;
+}
+
+.iu6lrcUP {
+    background-color: var(--color-bg-search);
+    border: none;
+    border-radius: 20px;
+    height: 32px;
+    width: 240px;
+    padding-left: 40px;
+    color: var(--color-white);
+}
+
+.iu6lrcUP:focus {
+    outline: 2px solid var(--color-white);
+}
+
+.ofcTfC1D {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    height: 32px;
+    width: 32px;
+    padding: 8px;
+    cursor: pointer;
+}
+.fRtfVaQp {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.U_PPoo99 {
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.fpd6e4Hw {
+    width: 20px;
+    height: 20px;
+}
+.Aua9xcwX {
+    display: flex;
+    gap: 16px;
+}
+
+.k0WYNjo7 {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 4px 0;
+    border-bottom: 2px solid var(--color-underline-grey);
+}
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure, fieldset):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl
+):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+
+/**
+  Упрощаем работу с изображениями и видео
+ */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+  /**
+    Убираем скачок интерфейса по горизонтали
+    при появлении / исчезновении скроллбара
+   */
+  scrollbar-gutter: stable;
+  /**
+    Плавный скролл
+   */
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Нормализация высоты элемента ссылки при его инспектировании в DevTools
+ */
+a:where([class]) {
+  display: inline-flex;
+}
+
+/**
+  Курсор-рука при наведении на элемент
+ */
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+  Убирает серую подсветку при тапе на мобильных устройствах (iOS/Android)
+ */
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Приведение рамок таблиц в классический 'collapse' вид
+ */
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+    --color-primary: #E55A63;
+    --color-accent: #BB464E;
+    --color-white: #FFFFFF;
+    --color-bg-grey: #E2E2E4;
+    --color-bg-search: rgba(255, 255, 255, 0.3);
+    --color-text-red: #FF2D55;
+    --color-text-black: #333333;
+    --color-underline-grey: rgba(255, 255, 255, 0.2);
+    --color-outline-grey: #DBDBDB;
+
+    --font-sf-display: 'SF UI Display';
+}
+@font-face {
+    font-family: 'SF UI Display';
+    src: url(/assets/eece8c1cf0380eaec0fb.woff2);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url(/assets/742d517db4288c8da873.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url(/assets/c2abd6dec31d4b7aa60e.woff2);
+    font-weight: 700;
+}
+
+body {
+    font-family: var(--font-sf-display), sans-serif;
+    font-weight: 500;
+}
