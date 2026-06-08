@@ -1,0 +1,24 @@
+.wrapper {
+    width: 240px;
+    border-radius: 16px;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 4px 0 var(--color-shadow-black);
+}
+
+.image {
+    border-radius: 16px 16px 0 0;
+}
+
+.info {
+    padding: 12px 16px 8px 16px;
+}
+
+.title {
+    color: var(--color-text-dark-grey);
+    min-height: 48px;
+    margin-bottom: 12px;
+}
+
+.price {
+    color: var(--color-text-black)
+}

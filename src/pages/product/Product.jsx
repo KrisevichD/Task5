@@ -9,8 +9,6 @@ const Product = () => {
     return (
         <div>
             product {id}:
-
-
         </div>
     );
 }

@@ -1,6 +1,8 @@
 .header {
+    position: sticky;
+    top: 0;
     background-color: var(--color-primary);
-    min-height: 88px;
+    height: 88px;
 }
 
 .headerInner {
@@ -8,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .collectionLeft {

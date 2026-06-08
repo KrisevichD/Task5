@@ -1,0 +1,14 @@
+.title {
+    text-align: center;
+}
+
+.section {
+    display: flex;
+    gap: 48px;
+    padding: 48px 113px 0 48px;
+    background-color: var(--color-bg-light-grey);
+}
+
+.main {
+    width: 100%;
+}

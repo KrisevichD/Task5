@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    gap: 6px;
+    color: var(--color-text-black);
+}
+
+.legend {
+    display: inline-block;
+    color: var(--color-text-grey);
+}
+
+.input {
+    display: none;
+}
+
+.label {
+    cursor: pointer;
+    color: var(--color-text-dark-grey)
+}
+
+.input:checked + .label {
+    color: var(--color-text-pink);
+}
