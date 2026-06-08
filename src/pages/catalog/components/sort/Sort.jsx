@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import classes from "./styles.module.css"
 
-const Sort = () => {
-    const [sort, setSort] = useState('ascending')
-
+const Sort = ({ sortType, setSortType }) => {
     return (
         <div className={classes.wrapper}>
             <p className={classes.legend}>Sort by:</p>
@@ -13,8 +11,8 @@ const Sort = () => {
                 name='sort'
                 id='ascending'
                 value={'ascending'}
-                checked={sort === 'ascending'}
-                onChange={(e) => {console.log(e.target.value); setSort(e.target.value)}}
+                checked={sortType === 'ascending'}
+                onChange={(e) => setSortType(e.target.value)}
             />
             <label 
                 htmlFor='ascending'
@@ -28,8 +26,8 @@ const Sort = () => {
                 name='sort'
                 id='descending'
                 value={'descending'}
-                checked={sort === 'descending'}
-                onChange={(e) => {console.log(e.target.value); setSort(e.target.value)}}
+                checked={sortType === 'descending'}
+                onChange={(e) => setSortType(e.target.value)}
             />
             <label 
                 htmlFor='descending'

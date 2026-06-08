@@ -1,6 +1,6 @@
 import React from 'react';
-import HeartSvg from '@/assets/heart.svg'
-import CartSvg from '@/assets/cart.svg'
+import HeartSvg from '@/assets/icons/heart.svg'
+import CartSvg from '@/assets/icons/cart.svg'
 import classes from './styles.module.css'
 import { Link } from 'react-router-dom';
 

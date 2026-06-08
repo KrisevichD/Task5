@@ -5,6 +5,7 @@
     --color-bg-grey: #E2E2E4;
     --color-bg-light-grey: #F5F5F7;
     --color-bg-search: rgba(255, 255, 255, 0.3);
+    --color-icon-grey: #7D7D7D;
     --color-text-pink: rgba(244, 113, 122, 0.7);
     --color-text-red: #FF2D55;
     --color-text-black: #333333;
@@ -15,4 +16,6 @@
     --color-outline-grey: #DBDBDB;
 
     --font-sf-display: 'SF UI Display';
+
+    --transition: 100ms;
 }

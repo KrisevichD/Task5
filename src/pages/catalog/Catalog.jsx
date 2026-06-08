@@ -1,39 +1,49 @@
-import { useGetProductsQuery } from '@/api/productsApi';
-import React from 'react';
+import { useGetCategoriesQuery } from '@/api/productsApi';
+import React, { useState, useEffect } from 'react';
 import Categories from './components/categories/Categories';
 import Filters from './components/filters/Filters';
 import Sort from './components/sort/Sort';
 import Products from './components/products/Products';
 import classes from "./styles.module.css"
 import Spinner from '@/components/ui/spinner/Spinner';
+import ErrorMessage from '@/components/ui/error/ErrorMessage';
 
 
 const Catalog = () => {
-    const { data, error, isLoading } = useGetProductsQuery()
+    const { 
+        data, 
+        error, 
+        isLoading
+    } = useGetCategoriesQuery();
 
-    if (isLoading) return (
-        <Spinner />
-    )
+    const [currentCategory, setCurrentCategory] = useState('beauty');
+    const [sortType, setSortType] = useState('ascending');
 
-    if (error) return (
-        <>
-            Failed to load data!
-        </>
-    )
+    console.log('render')
 
-    console.log(data)
+    if (isLoading) return <Spinner />
+
+    if (error) return <ErrorMessage message={'failed to load data'} />
 
     return (
         <div className={classes.wrapper}>
             <h1 className={classes.title}>Catalog</h1>
-            <div className={classes.section}>
+            <div className={classes.inner}>
                 <div className={classes.sidebar}>
-                    <Categories />
+                    <h2 className={classes.sidebarTitle}>Categories</h2>
+                    {isLoading
+                        ? <Spinner /> 
+                        : <Categories 
+                            list={data} 
+                            currentCategory={currentCategory} 
+                            setCategory={setCurrentCategory} 
+                        />
+                    }
                 </div>
                 <div className={classes.main}>
                     <Filters />
-                    <Sort />
-                    <Products list={data.products} />
+                    <Sort sortType={sortType} setSortType={setSortType}/>
+                    <Products category={currentCategory} isAscending={sortType === 'ascending'}/>
                 </div>
             </div>
         </div>
