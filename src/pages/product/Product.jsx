@@ -19,7 +19,7 @@ const Product = () => {
     return (
         <article className={classes.wrapper}>
             <h1>{data.title}</h1>
-            <section className={classes.imagesection}>
+            <section className={classes.imageSection}>
                 <Images list={data.images} alt={data.title}/>
             </section>
             <section className={classes.infoSection}>

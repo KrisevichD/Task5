@@ -1,27 +1,29 @@
 .wrapper {
     background-color: var(--color-white);
-    width: 50%;
     padding: 16px;
     border-radius: 16px;
     box-shadow: 0 4px 4px 0 var(--color-shadow-black);
-    text-align: left;
 }
 
 .table {
+    text-align: left;
+}
+
+.tableBody {
     vertical-align: top;
 }
 
-.table tr:not(:last-child) > *{
+.tr:not(:last-child) > *{
     border-bottom: 2px solid var(--color-shadow-black);
 }
 
-.table tr th {
+.th {
     width: 8rem;
     background-color: var(--color-white);
     color: var(--color-text-grey);
 }
 
-.table tr td {
+.td {
     display: flex;
     flex-direction: row;
     align-items: center;

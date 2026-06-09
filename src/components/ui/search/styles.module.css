@@ -7,8 +7,10 @@
     border: none;
     border-radius: 20px;
     height: 32px;
-    width: 240px;
+    width: 100%;
+    max-width: 240px;
     padding-left: 40px;
+    padding-right: 8px;
     color: var(--color-white);
 }
 

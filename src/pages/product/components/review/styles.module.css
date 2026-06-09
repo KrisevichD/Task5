@@ -9,12 +9,13 @@
 .header {
     display: grid;
     grid-template-columns: 40px 1fr auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 0 8px;
     grid-template-areas:
         "icon name rating"
         "icon email date";
     text-align: left;
+    align-items: center;
 }
 
 .profile {
@@ -37,19 +38,16 @@
     grid-area: email;
     color: var(--color-text-grey);
     font-size: 0.75rem;
-}
-
-.heart *{
-    fill: var(--color-primary);
+    overflow: scroll;
 }
 
 .rating {
     grid-area: rating;
-    font-size: 0.75rem;
+    font-size: 1.2rem;
     text-align: right;
     display: flex;
     justify-content: right;
-    gap: 4px;
+    gap: 2px;
     align-items: center;
 }
 
