@@ -65,7 +65,6 @@
     grid-area: email;
     color: var(--color-text-grey);
     font-size: 0.75rem;
-    overflow: scroll;
 }
 
 .Ct39YNrj {
@@ -88,6 +87,12 @@
 
 .Ke47UONV {
     margin: 12px 48px;
+}
+
+@media (max-width: 750px) {
+    .Q40zSQLW {
+        overflow-x: scroll;
+    }
 }
 .WPsWz1o3 {
     display: flex;
@@ -169,7 +174,7 @@
     transition: var(--transition);
 }
 
-.KAYMT4yR {
+.tr7vEqN7 {
     position: absolute;
     bottom: 0;
     left: calc(50% - width);
@@ -181,7 +186,6 @@
     border-radius: 8px 8px 0 0;
     background-color: var(--color-bg-black-01);
     transition: var(--transition);
-    overflow: scroll;
 }
 
 .IVwVEXPN {
@@ -229,5 +233,11 @@
     .Rs3a92ip:hover, 
     .j0dK14Ox:hover {
         background-color: var(--color-bg-black-04);
+    }
+}
+
+@media (max-width: 750px) {
+    .tr7vEqN7 {   
+        overflow-x: scroll;
     }
 }
