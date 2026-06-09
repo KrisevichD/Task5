@@ -7,7 +7,7 @@
 }
 
 .jFRK2WqN {
-    padding: 24px 48px;
+    padding: 24px var(--offset-main);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,8 +43,10 @@
     border: none;
     border-radius: 20px;
     height: 32px;
-    width: 240px;
+    width: 100%;
+    max-width: 240px;
     padding-left: 40px;
+    padding-right: 8px;
     color: var(--color-white);
 }
 
@@ -285,6 +287,8 @@ svg * {
     --color-bg-grey: #E2E2E4;
     --color-bg-light-grey: #F5F5F7;
     --color-bg-search: rgba(255, 255, 255, 0.3);
+    --color-bg-black-01: rgba(0, 0, 0, 0.1);
+    --color-bg-black-04: rgba(0, 0, 0, 0.4);
     --color-icon-grey: #7D7D7D;
     --color-text-pink: rgba(244, 113, 122, 0.7);
     --color-text-red: #FF2D55;
@@ -297,25 +301,33 @@ svg * {
 
     --font-sf-display: 'SF UI Display';
 
+    --offset-main: 48px;
+
     --transition: 100ms;
+}
+
+@media (max-width: 750px) {
+    :root {
+        --offset-main: 16px;
+    }
 }
 @font-face {
     font-family: 'SF UI Display';
-    src: url(https://krisevichd.github.io/Task5/assets/eece8c1cf0380eaec0fb.woff2);
+    src: url(https://krisevichd.github.io/Task5/assets/fonts/sf-ui-display-medium.eece8c1c.woff2);
     font-weight: 500;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'SF UI Display';
-    src: url(https://krisevichd.github.io/Task5/assets/742d517db4288c8da873.woff2);
+    src: url(https://krisevichd.github.io/Task5/assets/fonts/sf-ui-display-semibold.742d517d.woff2);
     font-weight: 600;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'SF UI Display';
-    src: url(https://krisevichd.github.io/Task5/assets/c2abd6dec31d4b7aa60e.woff2);
+    src: url(https://krisevichd.github.io/Task5/assets/fonts/sf-ui-display-bold.c2abd6de.woff2);
     font-weight: 700;
     font-display: swap;
 }
@@ -323,5 +335,20 @@ svg * {
 body {
     font-family: var(--font-sf-display), sans-serif;
     font-weight: 500; 
+    color: var(--color-text-black);
     background-color: var(--color-bg-light-grey);
+    font-size: 1rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }

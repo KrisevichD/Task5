@@ -1,0 +1,233 @@
+.p1f7FyeI {
+    padding: var(--offset-main);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.dfhsxd3_ {
+    width: 100%;
+}
+
+.oko4otsC {
+    width: 60%;
+}
+
+.dA8tOot0 {
+    width: 60%;
+}
+
+@media (max-width: 1100px) {
+    .oko4otsC,
+    .dA8tOot0 {
+        width: 100%;
+    }
+}
+.PiPofXAI {
+    background-color: var(--color-white);
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 4px 0 var(--color-shadow-black);
+    text-align: left;
+}
+
+.OMIgCdmV {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0 8px;
+    grid-template-areas:
+        "icon name rating"
+        "icon email date";
+    text-align: left;
+    align-items: center;
+}
+
+.mJh56RDo {
+    grid-area: icon;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+.p7OxBnpc {
+    grid-area: name;
+    color: var(--color-text-black);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.Q40zSQLW {
+    grid-area: email;
+    color: var(--color-text-grey);
+    font-size: 0.75rem;
+    overflow: scroll;
+}
+
+.Ct39YNrj {
+    grid-area: rating;
+    font-size: 1.2rem;
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    gap: 2px;
+    align-items: center;
+}
+
+.w1iFfvsS {
+    grid-area: date;
+    text-align: right;
+    font-size: 0.75rem;
+    color: var(--color-text-grey);
+    font-weight: 500;
+}
+
+.Ke47UONV {
+    margin: 12px 48px;
+}
+.WPsWz1o3 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.mHBkcl2w {
+    background-color: var(--color-white);
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 4px 0 var(--color-shadow-black);
+}
+
+.Rl0iXok_ {
+    text-align: left;
+}
+
+.It_dN9H_ {
+    vertical-align: top;
+}
+
+.V9FASzxu:not(:last-child) > *{
+    border-bottom: 2px solid var(--color-shadow-black);
+}
+
+.cuYNAWiu {
+    width: 8rem;
+    background-color: var(--color-white);
+    color: var(--color-text-grey);
+}
+
+.DGQAV4bb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.vZT3TgFZ {
+    width: 1rem;
+    height: 1rem;
+}
+.QLUaeRnk {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 4px solid var(--color-bg-black-01);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.xQQuTfgD {
+    width: auto;
+    max-height: calc(100vh - 136px);
+    object-fit: contain;
+}
+
+.Rs3a92ip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    background-color: var(--color-bg-black-01);
+    border: none;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.j0dK14Ox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background-color: var(--color-bg-black-01);
+    border: none;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.KAYMT4yR {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - width);
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    max-width: 80%;
+    backdrop-filter: blur(10px);
+    border-radius: 8px 8px 0 0;
+    background-color: var(--color-bg-black-01);
+    transition: var(--transition);
+    overflow: scroll;
+}
+
+.IVwVEXPN {
+    max-width: 60px;
+    min-width: 60px;
+    border: none;
+    border-radius: 4px;
+}
+
+.tXtMQaHv {
+    border: 2px solid var(--color-primary);
+}
+
+.kuI88A0v {
+    transform: rotate(-90deg);
+    width: 100%;
+    max-width: 40px;
+    height: auto;
+
+    & * {
+        fill: var(--color-white);
+    }
+}
+
+.Mf5DJoCm {
+    transform: rotate(90deg);
+    width: 100%;
+    max-width: 40px;
+    height: auto;
+
+    & * {
+        fill: var(--color-white);
+    }
+}
+
+@media (hover: hover) {
+    .KAYMT4yR {  
+        opacity: 0.5;
+    }
+
+    .KAYMT4yR:hover {
+        opacity: 1;
+    }
+
+    .Rs3a92ip:hover, 
+    .j0dK14Ox:hover {
+        background-color: var(--color-bg-black-04);
+    }
+}

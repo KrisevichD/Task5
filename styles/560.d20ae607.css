@@ -50,19 +50,6 @@
     color: var(--color-text-grey);
 }
 
-.Ih77EuZi {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
 .Ih77EuZi:focus-visible + .ajcLGbNY {
     outline: 1px solid var(--color-text-pink);
 }
@@ -143,6 +130,10 @@
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 24px 16px;
 }
+.qD68SYH0 {
+    padding: var(--offset-main);
+}
+
 .GqyKTzaH {
     text-align: center;
 }
@@ -162,7 +153,7 @@
 .KwHTSzDp {
     display: flex;
     gap: 48px;
-    padding: 48px 113px 48px 48px;
+    padding-right: 65px;
 }
 
 .PbubSSxv {
