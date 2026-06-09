@@ -5,6 +5,7 @@ export function buildPlugins(options) {
     const plugins = [
         new HtmlWebpackPlugin({
             template: options.paths.html,
+            favicon: "./public/favicon.ico"
         })
     ]
 
