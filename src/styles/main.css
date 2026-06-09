@@ -1,5 +1,6 @@
 @import "./normalize.css";
 @import "./constants.css";
+@import "./animations.css";
 
 @font-face {
     font-family: 'SF UI Display';

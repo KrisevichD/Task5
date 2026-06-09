@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCard from '../product-card/ProductCard';
+import ProductCard from '../../../../components/common/product-card/ProductCard';
 import classes from "./styles.module.css"
 import { useGetProductsQuery } from '@/api/productsApi';
 import Spinner from '@/components/ui/spinner/Spinner';
@@ -31,11 +31,7 @@ const Products = ({ category, isAscending }) => {
                 return (
                     <ProductCard 
                         key={item.id} 
-                        id={item.id} 
-                        title={item.title} 
-                        price={item.price} 
-                        thumbnail={item.thumbnail}
-                        images={item.images}
+                        product={item}
                     />
                 )
             })}

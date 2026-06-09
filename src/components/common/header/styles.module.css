@@ -27,3 +27,20 @@
     align-items: center;
     gap: 40px;
 }
+
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.animatedCart {
+    animation: global(bump) var(--transition) ease-out;
+}
+
+.cartAmount {
+    width: 20px;
+    color: var(--color-white);
+}
+

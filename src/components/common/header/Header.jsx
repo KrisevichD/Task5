@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import classes from "./styles.module.css"
 import Logo from '@/components/ui/logo/Logo';
 import Search from '@/components/ui/search/Search';
-import CartIcons from '@/components/ui/cart-icons/CartIcons';
 import Navbar from '@/components/ui/navbar/Navbar';
+import { useSelector } from 'react-redux';
+import CartSvg from '@/assets/icons/cart.svg'
+import { Link } from 'react-router-dom';
+import useIsFirstRender from '@/hooks/useIsFirstRender';
 
 const Header = () => {
     const navlist = [
@@ -15,7 +18,19 @@ const Header = () => {
             path: '/catalog',
             name: 'Catalog'
         }
-    ]
+    ];
+
+    const cart = useSelector((state) => state.cart);
+    const cartAmount = cart.length > 99 ? '99+' : cart.length;
+    const isFirstRender = useIsFirstRender();
+    const [animationClass, setAnimationClass] = useState("");
+
+    useEffect(() => {
+        if (isFirstRender) return;
+
+        setAnimationClass("");
+        queueMicrotask(() => setAnimationClass(classes.animatedCart));
+    }, [cartAmount]);
 
     return (
         <header className={classes.header}>
@@ -26,7 +41,14 @@ const Header = () => {
                 </div>
                 <div className={classes.collectionRight}>
                     <Navbar navlist={navlist}/>
-                    <CartIcons />
+                    <Link 
+                        to={'/cart'} 
+                        onAnimationEnd={() => setAnimationClass("")} 
+                        className={classes.cart + " " + animationClass}
+                    >
+                        <CartSvg />
+                        <span className={classes.cartAmount}>{cartAmount}</span>
+                    </Link>
                 </div>
             </div>
         </header>
