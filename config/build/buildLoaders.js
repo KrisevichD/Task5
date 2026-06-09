@@ -35,8 +35,8 @@ export function buildLoaders({ isDev }) {
         ],
     };
 
-    const cssLoader = {
-        test: /\.css$/i,
+    const cssModuleLoader = {
+        test: /\.module\.css$/i,
         use: [
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             {
@@ -47,6 +47,15 @@ export function buildLoaders({ isDev }) {
                     }
                 }
             }
+        ],
+    }
+
+    const cssLoader = {
+        test: /\.css$/i,
+        exclude: /\.module\.css$/,
+        use: [
+            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            'css-loader'
         ],
     };
 
@@ -72,6 +81,8 @@ export function buildLoaders({ isDev }) {
     return [
         assetLoader,
         svgLoader,
+        fontsLoader,
+        cssModuleLoader,
         cssLoader,
         jsxLoader
     ]
