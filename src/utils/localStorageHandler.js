@@ -8,3 +8,11 @@ export const loadDataFromStorage = (storage) => {
         return undefined;
     }
 }
+
+export const loadDataToStorage = (storage, data) => {
+    try {
+        localStorage.setItem(storage, data);
+    } catch (error) {
+        console.error('Unable to save cart', error)
+    }
+}

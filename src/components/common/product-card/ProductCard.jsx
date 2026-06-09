@@ -5,7 +5,7 @@ import CartSvg from '@/assets/icons/cart.svg'
 import useProductCard from '@/hooks/useProductCard';
 
 const ProductCard = ({ product }) => {
-    const { isInCart, handleToggleProduct } = useProductCard(product);
+    const { isInCart, handleCartToggle } = useProductCard(product);
     const iconClasses = classes.cartIcon + " " + (isInCart ? classes.isPressed : "")
 
     return (
@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
                 <p className={classes.price}>{product.price} €</p>
                 <button 
                     className={classes.cartBtn} 
-                    onClick={handleToggleProduct}
+                    onClick={handleCartToggle}
                 >
                     <CartSvg className={iconClasses}/>
                 </button>

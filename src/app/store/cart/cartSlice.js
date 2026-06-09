@@ -1,4 +1,4 @@
-import { productsApi } from "@/api/productsApi";
+import { productsApi } from "@/app/api/productsApi";
 import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
@@ -8,23 +8,15 @@ const cartSlice = createSlice({
         toggleProductInCart: (state, action) => {
             const indexInCart = state.findIndex(item => item.id === action.payload.id);
             if (indexInCart === -1) {
-                state.push(action.payload)
+                return [...state, action.payload];
             } else {
-                state.splice(indexInCart, 1);
+                return state.filter((item) => item.id !== action.payload.id);
             }
         },
-        clearCart: (state) => {
+        clearCart: () => {
             return [];
         }
     },
-    extraReducers: (builder) => {
-        builder.addMatcher(
-            productsApi.endpoints.getProducts.matchFulfilled,
-            (state, action) => {
-                
-            }
-        )
-    }
 });
 
 export const { toggleProductInCart, clearCart } = cartSlice.actions;

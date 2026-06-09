@@ -1,4 +1,4 @@
-import App from "@/components/App";
+import App from "@/App";
 import { lazy } from "react";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 

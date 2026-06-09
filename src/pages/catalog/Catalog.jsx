@@ -1,4 +1,4 @@
-import { useGetCategoriesQuery } from '@/api/productsApi';
+import { useGetCategoriesQuery } from '@/app/api/productsApi';
 import { useState } from 'react';
 import Categories from './components/categories/Categories';
 import Filters from './components/filters/Filters';
@@ -6,7 +6,7 @@ import Sort from './components/sort/Sort';
 import Products from './components/products/Products';
 import classes from "./styles.module.css"
 import Spinner from '@/components/ui/spinner/Spinner';
-import ErrorMessage from '@/components/ui/error/ErrorMessage';
+import ErrorMessage from '@/components/ui/error-message/ErrorMessage';
 
 
 const Catalog = () => {

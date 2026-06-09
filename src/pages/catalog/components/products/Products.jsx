@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from '../../../../components/common/product-card/ProductCard';
 import classes from "./styles.module.css"
-import { useGetProductsQuery } from '@/api/productsApi';
+import { useGetProductsQuery } from '@/app/api/productsApi';
 import Spinner from '@/components/ui/spinner/Spinner';
 
 const Products = ({ category, isAscending }) => {

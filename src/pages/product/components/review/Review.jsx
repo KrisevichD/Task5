@@ -17,7 +17,7 @@ const Review = ({ data }) => {
                 <h3 className={classes.name}>{data.reviewerName}</h3>
                 <p className={classes.email}>{data.reviewerEmail}</p>
                 <p className={classes.rating}><HeartSvg className={classes.heart}/>{data.rating}</p>
-                <time className={classes.date} dateTime={dateString}>{dateString}</time>
+                <p className={classes.date} dateTime={dateString}>{dateString}</p>
             </header>
             <p className={classes.comment}>{data.comment}</p>
         </article>
