@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import classes from "./styles.module.css"
 
 const Sort = ({ sortType, setSortType }) => {
@@ -6,7 +5,7 @@ const Sort = ({ sortType, setSortType }) => {
         <div className={classes.wrapper}>
             <p className={classes.legend}>Sort by:</p>
             <input 
-                className={classes.input}
+                className={classes.input + " visually-hidden"}
                 type="radio" 
                 name='sort'
                 id='ascending'
@@ -21,7 +20,7 @@ const Sort = ({ sortType, setSortType }) => {
                 Ascending price
             </label>
             <input 
-                className={classes.input}
+                className={classes.input + " visually-hidden"}
                 type="radio" 
                 name='sort'
                 id='descending'

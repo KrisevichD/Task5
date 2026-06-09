@@ -1,5 +1,5 @@
 import { useGetCategoriesQuery } from '@/api/productsApi';
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Categories from './components/categories/Categories';
 import Filters from './components/filters/Filters';
 import Sort from './components/sort/Sort';
@@ -10,20 +10,16 @@ import ErrorMessage from '@/components/ui/error/ErrorMessage';
 
 
 const Catalog = () => {
-    const { 
-        data, 
-        error, 
-        isLoading
-    } = useGetCategoriesQuery();
-
+    const { data, error, isLoading } = useGetCategoriesQuery();
     const [currentCategory, setCurrentCategory] = useState('beauty');
     const [sortType, setSortType] = useState('ascending');
-
-    console.log('render')
 
     if (isLoading) return <Spinner />
 
     if (error) return <ErrorMessage message={'failed to load data'} />
+
+    console.log(data);
+    
 
     return (
         <div className={classes.wrapper}>

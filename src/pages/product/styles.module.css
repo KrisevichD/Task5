@@ -1,0 +1,20 @@
+.wrapper {
+    padding: var(--offset-main);
+    text-align: center;
+}
+
+.imageSection {
+    width: 100%;
+}
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviewSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

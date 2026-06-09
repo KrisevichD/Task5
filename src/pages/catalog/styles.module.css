@@ -1,3 +1,7 @@
+.wrapper {
+    padding: var(--offset-main);
+}
+
 .title {
     text-align: center;
 }
@@ -17,7 +21,7 @@
 .inner {
     display: flex;
     gap: 48px;
-    padding: 48px 113px 48px 48px;
+    padding-right: 65px;
 }
 
 .main {

@@ -22,7 +22,8 @@ const Products = ({ category, isAscending }) => {
     if (isLoading) return <Spinner />
 
     const sortedData = [...data.products].sort((a, b) => isAscending ? a.price - b.price : b.price - a.price);
-    console.log(isAscending, sortedData)
+
+    console.log(data)
 
     return (
         <ul className={classes.wrapper}>

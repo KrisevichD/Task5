@@ -8,7 +8,7 @@ const Categories = ({ list, currentCategory, setCategory }) => {
                     <li key={item.slug} className={classes.item}>
                         <input 
                             type="radio" 
-                            className={classes.input}
+                            className={classes.input + " visually-hidden"}
                             value={item.slug}
                             name='category'
                             id={item.slug}
