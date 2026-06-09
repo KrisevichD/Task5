@@ -32,7 +32,7 @@ const Images = ({ list, alt }) => {
             >
                 <ArrowSvg className={classes.arrowRight} />
             </button>
-            <div className={classes.buttons}>
+            <div className={classes.imageButtons}>
                 {list?.map((item, index) => {
                     return (
                         <button

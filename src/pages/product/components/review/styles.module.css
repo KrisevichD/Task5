@@ -38,7 +38,6 @@
     grid-area: email;
     color: var(--color-text-grey);
     font-size: 0.75rem;
-    overflow: scroll;
 }
 
 .rating {
@@ -61,4 +60,10 @@
 
 .comment {
     margin: 12px 48px;
+}
+
+@media (max-width: 750px) {
+    .email {
+        overflow-x: scroll;
+    }
 }

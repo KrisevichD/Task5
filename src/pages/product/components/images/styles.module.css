@@ -38,7 +38,7 @@
     transition: var(--transition);
 }
 
-.buttons {
+.imageButtons {
     position: absolute;
     bottom: 0;
     left: calc(50% - width);
@@ -50,7 +50,6 @@
     border-radius: 8px 8px 0 0;
     background-color: var(--color-bg-black-01);
     transition: var(--transition);
-    overflow: scroll;
 }
 
 .imageButton {
@@ -98,5 +97,11 @@
     .buttonNext:hover, 
     .buttonPrev:hover {
         background-color: var(--color-bg-black-04);
+    }
+}
+
+@media (max-width: 750px) {
+    .imageButtons {   
+        overflow-x: scroll;
     }
 }
