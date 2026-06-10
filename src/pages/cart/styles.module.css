@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.list {
+    width: 100%;
+    padding: var(--offset-main);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.clearButton {
+    border: 2px solid var(--color-shadow-black);
+    background-color: var(--color-white);
+    color: var(--color-text-grey);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.orderButton {
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    padding: 8px;
+    border-radius: 8px;
+}
