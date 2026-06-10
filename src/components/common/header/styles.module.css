@@ -44,3 +44,14 @@
     color: var(--color-white);
 }
 
+@media (max-width: 640px) {
+    .header {
+        height: auto;
+    }
+
+    .collectionLeft,
+    .collectionRight {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

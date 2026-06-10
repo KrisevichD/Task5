@@ -11,7 +11,7 @@ import { useState } from "react";
 const Header = () => {
     const navlist = [
         {
-            path: '/about',
+            path: '/catalog',
             name: 'About us'
         },
         {
@@ -38,9 +38,10 @@ const Header = () => {
                         to={'/cart'} 
                         onAnimationEnd={setDefault} 
                         className={classes.cart + " " + animationClass}
+                        aria-label="open cart page"
                     >
-                        <CartSvg />
-                        <span className={classes.cartAmount}>{cartAmount}</span>
+                        <CartSvg aria-hidden={true}/>
+                        <span className={classes.cartAmount} aria-label="total count of items in cart">{cartAmount}</span>
                     </Link>
                 </div>
             </div>

@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 
 const Logo = () => {
     return (
-        <Link className={classes.logoBanner} to={'/'}>
-            <LogoSvg className={classes.logo} />
-            <NameSvg />
+        <Link className={classes.logoBanner} to={'/catalog'} aria-label="go to catalog">
+            <LogoSvg className={classes.logo} aria-hidden={true}/>
+            <NameSvg aria-hidden={true}/>
         </Link>
     );
 }

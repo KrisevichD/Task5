@@ -1,5 +1,4 @@
 import Categories from './components/categories/Categories';
-import Filters from './components/filters/Filters';
 import Sort from './components/sort/Sort';
 import Products from './components/products/Products';
 import classes from "./styles.module.css"
@@ -44,7 +43,6 @@ const Catalog = () => {
                     }
                 </div>
                 <div className={classes.main}>
-                    <Filters />
                     <Sort sortType={sortType} setSortType={setSortType}/>
                     {isProductsLoading
                         ? <Spinner />

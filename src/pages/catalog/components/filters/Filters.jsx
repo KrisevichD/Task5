@@ -4,7 +4,7 @@ import classes from "./styles.module.css"
 const Filters = () => {
     return (
         <div>
-            Filters
+            {/* TO DO: FILTERS */}
         </div>
     );
 }
