@@ -1,9 +1,9 @@
-import React from 'react';
+import classes from "./styles.module.css"
 
 const Spinner = () => {
     return (
-        <div>
-            loading
+        <div className={classes.wrapper}>
+            <div class={classes.loader}></div>
         </div>
     );
 }

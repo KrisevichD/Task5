@@ -1,6 +1,7 @@
 import App from "@/App";
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, Navigate } from "react-router-dom";
+import Spinner from "@/components/ui/spinner/Spinner";
 
 const Cart = lazy(() => import("@/pages/cart/Cart"));
 const Catalog = lazy(() => import("@/pages/catalog/Catalog"));
@@ -12,15 +13,15 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/cart',
-                element: <Cart />
+                element: <Suspense fallback={<Spinner/>}><Cart /></Suspense>
             },
             {
                 path: '/catalog',
-                element: <Catalog />,
+                element: <Suspense fallback={<Spinner/>}><Catalog /></Suspense>
             },
             {
                 path: '/catalog/:id',
-                element: <Product />
+                element: <Suspense fallback={<Spinner/>}><Product /></Suspense>
             },
         ]
     },

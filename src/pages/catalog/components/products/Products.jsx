@@ -1,33 +1,11 @@
 import React from 'react';
 import ProductCard from '../../../../components/common/product-card/ProductCard';
 import classes from "./styles.module.css"
-import { useGetProductsQuery } from '@/app/api/productsApi';
-import Spinner from '@/components/ui/spinner/Spinner';
 
-const Products = ({ category, isAscending }) => {
-    const { 
-        data, 
-        error, 
-        isLoading,
-    } = useGetProductsQuery(category);
-
-    if (error) {
-        return (
-            <>
-                Failed to load data!
-            </>
-        )
-    }
-
-    if (isLoading) return <Spinner />
-
-    const sortedData = [...data.products].sort((a, b) => isAscending ? a.price - b.price : b.price - a.price);
-
-    console.log(data)
-
+const Products = ({ products }) => {
     return (
-        <ul className={classes.wrapper}>
-            {sortedData?.map((item) => {
+        <div className={classes.wrapper}>
+            {products?.map((item) => {
                 return (
                     <ProductCard 
                         key={item.id} 
@@ -35,7 +13,7 @@ const Products = ({ category, isAscending }) => {
                     />
                 )
             })}
-        </ul>
+        </div>
     );
 }
 

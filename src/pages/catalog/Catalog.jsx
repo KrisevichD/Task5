@@ -1,25 +1,32 @@
-import { useGetCategoriesQuery } from '@/app/api/productsApi';
-import { useState } from 'react';
 import Categories from './components/categories/Categories';
 import Filters from './components/filters/Filters';
 import Sort from './components/sort/Sort';
 import Products from './components/products/Products';
 import classes from "./styles.module.css"
-import Spinner from '@/components/ui/spinner/Spinner';
 import ErrorMessage from '@/components/ui/error-message/ErrorMessage';
+import useProductList from '@/hooks/useProductList';
+import Spinner from '@/components/ui/spinner/Spinner';
+import useSortedProducts from '@/hooks/useSortedProducts';
 
 
 const Catalog = () => {
-    const { data, error, isLoading } = useGetCategoriesQuery();
-    const [currentCategory, setCurrentCategory] = useState('beauty');
-    const [sortType, setSortType] = useState('ascending');
+    const {
+        categories,
+        products,
+        selectedCategory,
+        setSelectedCategory,
+        isError,
+        isCategoriesLoading,
+        isProductsLoading 
+    } = useProductList();
 
-    if (isLoading) return <Spinner />
+    if (isError) return <ErrorMessage message="Unable to load data!"/>
 
-    if (error) return <ErrorMessage message={'failed to load data'} />
-
-    console.log(data);
-    
+    const {
+        sortedProducts,
+        sortType,
+        setSortType
+    } = useSortedProducts(products);
 
     return (
         <div className={classes.wrapper}>
@@ -27,19 +34,24 @@ const Catalog = () => {
             <div className={classes.inner}>
                 <div className={classes.sidebar}>
                     <h2 className={classes.sidebarTitle}>Categories</h2>
-                    {isLoading
-                        ? <Spinner /> 
-                        : <Categories 
-                            list={data} 
-                            currentCategory={currentCategory} 
-                            setCategory={setCurrentCategory} 
+                    {isCategoriesLoading
+                        ? <Spinner />
+                        : <Categories
+                            categories={categories}
+                            currentCategory={selectedCategory}
+                            setCategory={setSelectedCategory}
                         />
                     }
                 </div>
                 <div className={classes.main}>
                     <Filters />
                     <Sort sortType={sortType} setSortType={setSortType}/>
-                    <Products category={currentCategory} isAscending={sortType === 'ascending'}/>
+                    {isProductsLoading
+                        ? <Spinner />
+                        : <Products
+                            products={sortedProducts}
+                        />
+                    }
                 </div>
             </div>
         </div>

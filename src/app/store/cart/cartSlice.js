@@ -8,7 +8,7 @@ const cartSlice = createSlice({
         toggleProductInCart: (state, action) => {
             const indexInCart = state.findIndex(item => item.id === action.payload.id);
             if (indexInCart === -1) {
-                return [...state, action.payload];
+                return [action.payload, ...state];
             } else {
                 return state.filter((item) => item.id !== action.payload.id);
             }

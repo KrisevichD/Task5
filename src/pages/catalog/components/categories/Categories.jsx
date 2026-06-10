@@ -1,9 +1,12 @@
+import { useGetCategoriesQuery } from "@/app/api/productsApi";
 import classes from "./styles.module.css"
+import Spinner from "@/components/ui/spinner/Spinner";
+import ErrorMessage from "@/components/ui/error-message/ErrorMessage";
 
-const Categories = ({ list, currentCategory, setCategory }) => {
+const Categories = ({ categories, currentCategory, setCategory }) => {
     return (
         <ul className={classes.wrapper}>
-            {list?.map((item) => {
+            {categories?.map((item) => {
                 return (
                     <li key={item.slug} className={classes.item}>
                         <input 
