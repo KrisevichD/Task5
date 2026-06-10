@@ -44,14 +44,13 @@ const Search = () => {
                 aria-label="search"
                 onFocus={() => setIsResultsVisible(true)}
             />
-            {isResultsVisible && isFetching ? (
-                <div className={classes.searchIcon}>
-                    <Spinner />
-                </div>
-            ) : (
-                <SearchSvg className={classes.searchIcon} />
-            )}
+            <SearchSvg className={classes.searchIcon} />
             <div className={classes.results}>
+                {isResultsVisible && isFetching && (
+                    <div className={classes.spinner}>
+                        <Spinner />
+                    </div>
+                )}
                 {isResultsVisible &&
                     data?.products.map((item) => {
                         return (
