@@ -1,12 +1,11 @@
-import { productsApi } from "@/app/api/productsApi";
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const cartSlice = createSlice({
     name: 'cart',
     initialState: [],
     reducers: {
         toggleProductInCart: (state, action) => {
-            const indexInCart = state.findIndex(item => item.id === action.payload.id);
+            const indexInCart = state.findIndex((item) => item.id === action.payload.id);
             if (indexInCart === -1) {
                 return [action.payload, ...state];
             } else {
@@ -15,7 +14,7 @@ const cartSlice = createSlice({
         },
         clearCart: () => {
             return [];
-        }
+        },
     },
 });
 

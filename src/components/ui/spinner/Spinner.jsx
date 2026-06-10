@@ -1,4 +1,4 @@
-import classes from "./styles.module.css"
+import classes from './styles.module.css';
 
 const Spinner = () => {
     return (
@@ -6,6 +6,6 @@ const Spinner = () => {
             <div className={classes.loader}></div>
         </div>
     );
-}
+};
 
 export default Spinner;

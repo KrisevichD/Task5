@@ -6,8 +6,9 @@
     text-align: center;
 }
 
-.sidebar{
+.sidebar {
     width: 204px;
+    min-height: 100px;
 }
 
 .sidebarTitle {
@@ -37,7 +38,7 @@
     .sidebar {
         width: 100%;
     }
-    
+
     .main {
         align-items: center;
     }

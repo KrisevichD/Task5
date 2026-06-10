@@ -33,9 +33,6 @@
     align-items: center;
     gap: 4px;
     text-decoration: none;
-}
-
-.animatedCart {
     animation: global(bump) var(--transition) ease-out;
 }
 

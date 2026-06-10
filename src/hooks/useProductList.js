@@ -1,5 +1,6 @@
-import { useGetCategoriesQuery, useGetProductsQuery } from "@/app/api/productsApi";
-import { useEffect, useState } from "react";
+import { useState } from 'react';
+
+import { useGetCategoriesQuery, useGetProductsQuery } from '@/app/api/productsApi';
 
 const useProductList = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
@@ -7,21 +8,17 @@ const useProductList = () => {
     const {
         data: categories,
         isLoading: isCategoriesLoading,
-        error: categoriesError
+        error: categoriesError,
     } = useGetCategoriesQuery();
 
-    useEffect(() => {
-        if (categories?.length > 0 && !selectedCategory) {
-            setSelectedCategory(categories[0].slug);
-        }
-    }, [categories, selectedCategory]);
+    const activeCategory = selectedCategory || categories?.[0]?.slug || null;
 
     const {
         data: products,
         isLoading: isProductsLoading,
-        error: productsError
-    } = useGetProductsQuery(selectedCategory, {
-        skip: !selectedCategory,
+        error: productsError,
+    } = useGetProductsQuery(selectedCategory ?? activeCategory, {
+        skip: !activeCategory,
     });
 
     const isError = !!(categoriesError || productsError);
@@ -33,8 +30,8 @@ const useProductList = () => {
         setSelectedCategory,
         isError,
         isCategoriesLoading,
-        isProductsLoading 
+        isProductsLoading,
     };
-}
+};
 
 export default useProductList;

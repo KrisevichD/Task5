@@ -1,41 +1,35 @@
-import classes from "./styles.module.css"
+import classes from './styles.module.css';
 
 const Sort = ({ sortType, setSortType }) => {
     return (
         <div className={classes.wrapper}>
             <p className={classes.legend}>Sort by:</p>
-            <input 
-                className={classes.input + " visually-hidden"}
-                type="radio" 
-                name='sort'
-                id='ascending'
+            <input
+                className={classes.input + ' visually-hidden'}
+                type="radio"
+                name="sort"
+                id="ascending"
                 value={'ascending'}
                 checked={sortType === 'ascending'}
                 onChange={(e) => setSortType(e.target.value)}
             />
-            <label 
-                htmlFor='ascending'
-                className={classes.label}
-            >
+            <label htmlFor="ascending" className={classes.label}>
                 Ascending price
             </label>
-            <input 
-                className={classes.input + " visually-hidden"}
-                type="radio" 
-                name='sort'
-                id='descending'
+            <input
+                className={classes.input + ' visually-hidden'}
+                type="radio"
+                name="sort"
+                id="descending"
                 value={'descending'}
                 checked={sortType === 'descending'}
                 onChange={(e) => setSortType(e.target.value)}
             />
-            <label 
-                htmlFor='descending'
-                className={classes.label}
-            >
+            <label htmlFor="descending" className={classes.label}>
                 Descending price
             </label>
         </div>
     );
-}
+};
 
 export default Sort;

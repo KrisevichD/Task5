@@ -91,12 +91,12 @@
 }
 
 .arrowLeft *,
-.arrowRight *{
+.arrowRight * {
     fill: var(--color-white);
 }
 
 @media (hover: hover) {
-    .buttons {  
+    .buttons {
         opacity: 0.5;
     }
 
@@ -104,14 +104,14 @@
         opacity: 1;
     }
 
-    .buttonNext:hover, 
+    .buttonNext:hover,
     .buttonPrev:hover {
         background-color: var(--color-bg-black-04);
     }
 }
 
 @media (max-width: 750px) {
-    .imageButtons {   
+    .imageButtons {
         overflow-x: scroll;
     }
 }

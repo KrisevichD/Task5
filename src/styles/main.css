@@ -1,6 +1,6 @@
-@import "./normalize.css";
-@import "./constants.css";
-@import "./animations.css";
+@import './normalize.css';
+@import './constants.css';
+@import './animations.css';
 
 @font-face {
     font-family: 'SF UI Display';
@@ -25,7 +25,7 @@
 
 body {
     font-family: var(--font-sf-display), sans-serif;
-    font-weight: 500; 
+    font-weight: 500;
     color: var(--color-text-black);
     background-color: var(--color-bg-light-grey);
     font-size: 1rem;

@@ -1,5 +1,6 @@
-import { toggleProductInCart } from "@/app/store/cart/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
+
+import { toggleProductInCart } from '@/app/store/cart/cartSlice';
 
 const useProductCard = (product) => {
     const dispatch = useDispatch();
@@ -9,7 +10,7 @@ const useProductCard = (product) => {
     return {
         isInCart,
         handleCartToggle,
-    }
-}
+    };
+};
 
 export default useProductCard;

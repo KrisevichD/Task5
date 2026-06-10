@@ -16,7 +16,7 @@
 
 .label {
     cursor: pointer;
-    color: var(--color-text-dark-grey)
+    color: var(--color-text-dark-grey);
 }
 
 .input:checked + .label {

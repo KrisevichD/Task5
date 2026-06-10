@@ -1,5 +1,6 @@
-import classes from "./styles.module.css"
-import HeartSvg from "@/assets/icons/heart.svg"
+import classes from './styles.module.css';
+
+import HeartSvg from '@/assets/icons/heart.svg';
 
 const Description = ({ data }) => {
     return (
@@ -32,12 +33,15 @@ const Description = ({ data }) => {
                     </tr>
                     <tr className={classes.tr}>
                         <th className={classes.th}>Rating</th>
-                        <td className={classes.td}><HeartSvg className={classes.heart} />{data.rating}</td>
+                        <td className={classes.td}>
+                            <HeartSvg className={classes.heart} />
+                            {data.rating}
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     );
-}
+};
 
 export default Description;

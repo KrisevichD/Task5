@@ -63,7 +63,7 @@
 }
 
 .cartIcon * {
-    fill: var(--color-icon-grey)
+    fill: var(--color-icon-grey);
 }
 
 .isPressed * {

@@ -1,8 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { productsApi } from "@/app/api/productsApi.js";
-import cartReducer from "./cart/cartSlice.js";
-import { setupListeners } from "@reduxjs/toolkit/query";
-import { loadDataFromStorage, loadDataToStorage } from "@/utils/localStorageHandler.js";
+import { configureStore } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/query';
+
+import cartReducer from './cart/cartSlice.js';
+
+import { productsApi } from '@/app/api/productsApi.js';
+import { loadDataFromStorage, loadDataToStorage } from '@/utils/localStorageHandler.js';
 
 const store = configureStore({
     reducer: {
@@ -10,17 +12,16 @@ const store = configureStore({
         cart: cartReducer,
     },
     preloadedState: {
-        cart: loadDataFromStorage('cart')
+        cart: loadDataFromStorage('cart'),
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productsApi.middleware)
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productsApi.middleware),
 });
 
 store.subscribe(() => {
     const state = store.getState();
     const cartState = JSON.stringify(state.cart);
     loadDataToStorage('cart', cartState);
-})
+});
 
 setupListeners(store.dispatch);
 export default store;
-

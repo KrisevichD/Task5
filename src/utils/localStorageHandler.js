@@ -7,12 +7,12 @@ export const loadDataFromStorage = (storage) => {
         console.error('Unable to load data from storage', error);
         return undefined;
     }
-}
+};
 
 export const loadDataToStorage = (storage, data) => {
     try {
         localStorage.setItem(storage, data);
     } catch (error) {
-        console.error('Unable to save cart', error)
+        console.error('Unable to save cart', error);
     }
-}
+};

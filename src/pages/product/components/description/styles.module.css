@@ -13,7 +13,7 @@
     vertical-align: top;
 }
 
-.tr:not(:last-child) > *{
+.tr:not(:last-child) > * {
     border-bottom: 2px solid var(--color-shadow-black);
 }
 
