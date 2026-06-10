@@ -22,10 +22,10 @@
 #### npm run start 
 > starts local devServer in development mode
 
-#### npm run build / npm run build:prod
+#### npm run build:dev / npm run build:prod
 > create build in development/production modes
 
 ## Deploy
 app is published on github pages
 
-link: https://krisevichd.github.io/catalog/#
+link: https://krisevichd.github.io/Task5/#
