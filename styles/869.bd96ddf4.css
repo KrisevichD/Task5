@@ -1,0 +1,121 @@
+.z1vCz7UM {
+    width: 240px;
+    border-radius: 16px;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 4px 0 var(--color-shadow-black);
+    position: relative;
+}
+
+.oA4WaH_H {
+    color: var(--color-text-dark-grey);
+    text-decoration: none;
+}
+
+.oA4WaH_H::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.wV9lqLuW {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: var(--color-bg-black-04);
+}
+
+.okTVEloT {
+    width: 240px;
+    height: 270px;
+    border-radius: 16px 16px 0 0;
+}
+
+.AQHqOpZh {
+    min-height: 48px;
+    margin: 12px 16px;
+    font-size: 1rem;
+}
+
+.cL9FeAH4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px 8px 16px;
+}
+
+.mKSrmNy0 {
+    position: relative;
+    color: var(--color-text-black);
+    font-weight: 600;
+}
+
+.QKboVGEt {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    transition: var(--transition);
+}
+
+.YD28V45c * {
+    fill: var(--color-icon-grey)
+}
+
+.B2wBJtjP * {
+    fill: var(--color-primary);
+}
+
+@media (hover: hover) {
+    .QKboVGEt:hover {
+        transform: scale(1.2);
+    }
+}
+.CvJHz60K {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.FqGlXb2x {
+    width: 100%;
+    padding: var(--offset-main);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.evBFX34V {
+    display: flex;
+    gap: 16px;
+}
+
+.E14jasxP {
+    border: 2px solid var(--color-shadow-black);
+    background-color: var(--color-white);
+    color: var(--color-text-grey);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.v8QQhRym {
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.U8Oy5zGD {
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    padding: 8px;
+    border-radius: 8px;
+}

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktask5=self.webpackChunktask5||[]).push([[305],{305(s,e,n){n.r(e),n.d(e,{default:()=>u});var t=n(848);const u=function(){return(0,t.jsx)("div",{children:"login"})}}}]);
