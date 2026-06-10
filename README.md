@@ -28,4 +28,4 @@
 ## Deploy
 app is published on github pages
 
-link: https://krisevichd.github.io/catalog
+link: https://krisevichd.github.io/catalog/#
