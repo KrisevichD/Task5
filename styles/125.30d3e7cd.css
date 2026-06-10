@@ -1,135 +1,3 @@
-.p1f7FyeI {
-    padding: var(--offset-main);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
-}
-
-.dfhsxd3_ {
-    width: 100%;
-}
-
-.oko4otsC {
-    width: 60%;
-}
-
-.JeaSIfr8 {
-    padding: 16px;
-    border: none;
-    border-radius: 16px;
-    font-size: 1.2rem;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
-
-.dA8tOot0 {
-    width: 60%;
-}
-
-@media (max-width: 1100px) {
-    .oko4otsC,
-    .dA8tOot0 {
-        width: 100%;
-    }
-}
-.zzBs4LNk {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-}
-
-.XQn5wl34 {
-    font-size: 1.2rem;
-}
-
-.DBUWyq5D {
-    border: none;
-    padding: 16px;
-    border-radius: 16px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
-.PiPofXAI {
-    background-color: var(--color-white);
-    padding: 16px;
-    border-radius: 16px;
-    box-shadow: 0 4px 4px 0 var(--color-shadow-black);
-    text-align: left;
-}
-
-.OMIgCdmV {
-    display: grid;
-    grid-template-columns: 40px 1fr auto;
-    grid-template-rows: auto auto;
-    gap: 0 8px;
-    grid-template-areas:
-        "icon name rating"
-        "icon email date";
-    text-align: left;
-    align-items: center;
-}
-
-.mJh56RDo {
-    grid-area: icon;
-    background-color: var(--color-primary);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-}
-
-.p7OxBnpc {
-    grid-area: name;
-    color: var(--color-text-black);
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-.Q40zSQLW {
-    grid-area: email;
-    color: var(--color-text-grey);
-    font-size: 0.75rem;
-}
-
-.Ct39YNrj {
-    grid-area: rating;
-    font-size: 1.2rem;
-    text-align: right;
-    display: flex;
-    justify-content: right;
-    gap: 2px;
-    align-items: center;
-}
-
-.w1iFfvsS {
-    grid-area: date;
-    text-align: right;
-    font-size: 0.75rem;
-    color: var(--color-text-grey);
-    font-weight: 500;
-}
-
-.Ke47UONV {
-    margin: 12px 48px;
-}
-
-@media (max-width: 750px) {
-    .Q40zSQLW {
-        overflow-x: scroll;
-    }
-}
-.WPsWz1o3 {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
 .mHBkcl2w {
     background-color: var(--color-white);
     padding: 16px;
@@ -145,7 +13,7 @@
     vertical-align: top;
 }
 
-.V9FASzxu:not(:last-child) > *{
+.V9FASzxu:not(:last-child) > * {
     border-bottom: 2px solid var(--color-shadow-black);
 }
 
@@ -165,6 +33,7 @@
     width: 1rem;
     height: 1rem;
 }
+
 .QLUaeRnk {
     position: relative;
     width: 100%;
@@ -258,12 +127,12 @@
 }
 
 .Mf5DJoCm *,
-.kuI88A0v *{
+.kuI88A0v * {
     fill: var(--color-white);
 }
 
 @media (hover: hover) {
-    .KAYMT4yR {  
+    .KAYMT4yR {
         opacity: 0.5;
     }
 
@@ -271,14 +140,151 @@
         opacity: 1;
     }
 
-    .Rs3a92ip:hover, 
+    .Rs3a92ip:hover,
     .j0dK14Ox:hover {
         background-color: var(--color-bg-black-04);
     }
 }
 
 @media (max-width: 750px) {
-    .tr7vEqN7 {   
+    .tr7vEqN7 {
         overflow-x: scroll;
     }
 }
+
+.PiPofXAI {
+    background-color: var(--color-white);
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 4px 0 var(--color-shadow-black);
+    text-align: left;
+}
+
+.OMIgCdmV {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0 8px;
+    grid-template-areas:
+        'icon name rating'
+        'icon email date';
+    text-align: left;
+    align-items: center;
+}
+
+.mJh56RDo {
+    grid-area: icon;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+.p7OxBnpc {
+    grid-area: name;
+    color: var(--color-text-black);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.Q40zSQLW {
+    grid-area: email;
+    color: var(--color-text-grey);
+    font-size: 0.75rem;
+}
+
+.Ct39YNrj {
+    grid-area: rating;
+    font-size: 1.2rem;
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    gap: 2px;
+    align-items: center;
+}
+
+.w1iFfvsS {
+    grid-area: date;
+    text-align: right;
+    font-size: 0.75rem;
+    color: var(--color-text-grey);
+    font-weight: 500;
+}
+
+.Ke47UONV {
+    margin: 12px 48px;
+}
+
+@media (max-width: 750px) {
+    .Q40zSQLW {
+        overflow-x: scroll;
+    }
+}
+
+.WPsWz1o3 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.p1f7FyeI {
+    padding: var(--offset-main);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.dfhsxd3_ {
+    width: 100%;
+}
+
+.oko4otsC {
+    width: 60%;
+}
+
+.JeaSIfr8 {
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.dA8tOot0 {
+    width: 60%;
+}
+
+@media (max-width: 1100px) {
+    .oko4otsC,
+    .dA8tOot0 {
+        width: 100%;
+    }
+}
+
+.zzBs4LNk {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.XQn5wl34 {
+    font-size: 1.2rem;
+}
+
+.DBUWyq5D {
+    border: none;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
