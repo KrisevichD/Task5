@@ -1,6 +1,6 @@
 import classes from "./styles.module.css"
 import Logo from '@/components/ui/logo/Logo';
-import Search from '@/components/ui/search/Search';
+import Search from '@/components/common/search/Search';
 import Navbar from '@/components/ui/navbar/Navbar';
 import { useSelector } from 'react-redux';
 import CartSvg from '@/assets/icons/cart.svg'
@@ -22,7 +22,6 @@ const Header = () => {
     const cart = useSelector((state) => state.cart);
     const { animationClass, setDefault } = useAnimationClass(classes.animatedCart, cart);
     const cartAmount = cart.length > 99 ? '99+' : cart.length;
-    const [searchQuery, setSearchQuery] = useState("");
     
     console.log(animationClass)
 
@@ -31,7 +30,7 @@ const Header = () => {
             <div className={classes.headerInner}>
                 <div className={classes.collectionLeft}>
                     <Logo />
-                    <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
+                    <Search />
                 </div>
                 <div className={classes.collectionRight}>
                     <Navbar navlist={navlist}/>
