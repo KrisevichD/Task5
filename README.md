@@ -22,7 +22,7 @@
 #### npm run start 
 > starts local devServer in development mode
 
-#### npm run build / npm run build:prod
+#### npm run build:dev / npm run build:prod
 > create build in development/production modes
 
 ## Deploy
