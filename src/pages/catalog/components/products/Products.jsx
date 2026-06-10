@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ProductCard from '../../../../components/common/product-card/ProductCard';
 
 import classes from './styles.module.css';

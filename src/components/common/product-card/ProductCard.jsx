@@ -33,10 +33,10 @@ const ProductCard = ({ product }) => {
             </Link>
             <div className={classes.bottomRow}>
                 <p className={classes.price}>{product.price} €</p>
-                <button 
-                    className={classes.cartBtn} 
+                <button
+                    className={classes.cartBtn}
                     onClick={handleCartToggle}
-                    aria-label='add to cart'
+                    aria-label="add to cart"
                 >
                     <CartSvg className={iconClasses} />
                 </button>
