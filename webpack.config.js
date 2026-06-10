@@ -17,7 +17,7 @@ export default (env) => {
             html: path.resolve(__dirname, "public", "index.html"),
             public: path.resolve(__dirname, "public"),
             src: path.resolve(__dirname, "src"),
-            deploy: "https://krisevichd.github.io/Task5/"
+            deploy: "/Task5/"
         }
     }
 

@@ -1,11 +1,20 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 export function buildPlugins(options) {
     const plugins = [
         new HtmlWebpackPlugin({
             template: options.paths.html,
             favicon: "./public/favicon.ico"
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { 
+                    from: 'public/404.html', 
+                    to: '404.html' 
+                }
+            ]
         })
     ]
 

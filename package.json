@@ -23,6 +23,7 @@
     "@babel/preset-react": "^7.29.7",
     "@svgr/webpack": "^8.1.0",
     "babel-loader": "^10.1.1",
+    "copy-webpack-plugin": "^14.0.0",
     "css-loader": "^6.11.0",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",

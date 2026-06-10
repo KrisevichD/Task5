@@ -6,7 +6,7 @@ const App = () => {
     return (
         <>
             <Header />
-            <main>
+            <main style={{ height: '100%' }}>
                 <Outlet />
             </main>
         </>
